@@ -1,0 +1,278 @@
+/*
+Possible colors to work with:
+https://coolors.co/05668d-427aa1-ebf2fa-679436-a5be00
+https://coolors.co/000022-001242-0094c6-005e7c-040f16
+https://coolors.co/56e39f-59c9a5-5b6c5d-3b2c35-2a1f2d
+https://coolors.co/dcdcdd-c5c3c6-46494c-4c5c68-1985a1
+https://coolors.co/000501-73ab84-99d19c-79c7c5-ade1e5
+https://coolors.co/2f6690-3a7ca5-d9dcd6-16425b-81c3d7
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: normal;
+}
+
+/* Mainly used with Navbar */
+header {
+  position: fixed;
+  background-color: #05668d;
+  height: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+  z-index: 99;
+}
+
+.canvas {
+  width: auto;
+  height: 600px;
+  margin: auto 0;
+}
+
+.logo {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.text {
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* Nav Bar tabs */
+a {
+  color: #ebf2fa;
+}
+
+#mainNav {
+  float: right;
+  margin-right: 1em;
+  margin-top: 20px;
+  word-spacing: 20px;
+}
+
+#mainNav a {
+  border-bottom: 0px solid #a5be00;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border 0.4s ease;
+}
+
+#mainNav a:hover, #design a:hover, #development a:hover, #email a:hover {
+  border-bottom: 2px solid #a5be00;
+  transition: border 0.4s ease;
+  color: #a5be00;
+}
+
+/* About section */
+/* Related to Hexagon */
+/*  Source: http://brenna.github.io/csshexagon/ */
+.hexagon {
+  position: relative;
+  width: 300px;
+  height: 173.21px;
+  margin: 86.60px 0;
+  background-image: url("/media/it%20me!.jpeg");
+  background-size: auto 334.8632px;
+  background-position: center;
+  border-left: solid 5px #427aa1;
+  border-right: solid 5px #427aa1;
+}
+
+.hexTop, .hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 212.13px;
+  height: 212.13px;
+  overflow: hidden;
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 38.93px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after, .hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 290.0000px;
+  height: 167.4315780649915px;
+  transform: rotate(45deg) scaleY(1.7321) translateY(-83.7158px);
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -106.0660px;
+  border-top: solid 7.0711px #427aa1;
+  border-right: solid 7.0711px #427aa1;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -106.0660px;
+  border-bottom: solid 7.0711px #427aa1;
+  border-left: solid 7.0711px #427aa1;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 2.8868px;
+  left: 0;
+  width: 290.0000px;
+  height: 167.4316px;
+  z-index: 2;
+  background: inherit;
+}
+
+/* Spacing */
+.spacing {
+  left: 50%;
+  padding-left: 40%;
+  padding-top: 3%;
+}
+
+/* Flex box */
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.flex .row {
+  flex-direction: row;
+}
+
+.flex .wrap {
+  flex-wrap: wrap;
+}
+
+/* Section - General stuff */
+section {
+  padding: 60px 0 70px 0;
+}
+
+section .container {
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+
+/* Section - About me */
+.header {
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 1px;
+  left: 0;
+  font-size: 25px;
+  text-align: center;
+
+}
+
+.aboutMe {
+  text-align: left;
+  width: 80%;
+  position: relative;
+  padding-left: 20%;
+  margin-top: 8%;
+  font-size: 30px;
+}
+
+.aboutText {
+  text-align: left;
+  width: 80%;
+  position: relative;
+  padding-left: 20%;
+  margin-top: 1%;
+  font-size: 30x;
+}
+
+.skills {
+  font-size: 20px;
+  text-align: left;
+  padding-left: 6%;
+  padding-top: 5%;
+}
+
+.skills p {
+  font-size: 15px;
+  padding: 5px;
+}
+
+/* Portfolio Section */
+.feature {
+  margin-bottom: 1em;
+}
+
+.feature .content {
+  padding: 2em 1em !important;
+}
+
+/* Contact Section */
+.backgroundColor {
+  background-color: #679436;
+}
+
+.generalText {
+  color: #ebf2fa;
+  left: 15%;
+  margin-left: 15%;
+  padding-top: 5%;
+  font-size: 20px;
+}
+
+#socialLinks, #email, #phone {
+  padding: 15px;
+}
+
+/* Footer/Copyright */
+footer {
+  position: relative;
+  width: 100%;
+  background-color: #679436;
+  height: 10%;
+}
+
+p.copyright {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  line-height: 40px;
+  font-size: 0.7em;
+  text-align: center;
+  bottom: 0;
+}
